@@ -21,7 +21,7 @@ public class IntentosConcurrencia {
 
     public static void main(String[] args) {
         IntentosConcurrencia o = new IntentosConcurrencia();
-        o.algoritmoIntento1(0);
+        o.algoritmoIntento1(1);
     }
 
     public IntentosConcurrencia() {
@@ -42,9 +42,10 @@ public class IntentosConcurrencia {
             case 0:
                 while (llaves.length > 0) {
                     turno = (int) llaves[0];
+                    System.out.println("Turno: " + turno);
                     System.out.println("Ejecutando proceso: " + procesos.get(turno));
-                    System.out.println("Finaliza proceso: " + procesos.get(turno));
                     procesos.remove(i);
+                    System.out.println("Finalizó proceso");    
                     i++;
                     llaves = procesos.keySet().toArray();
                 }
@@ -52,14 +53,24 @@ public class IntentosConcurrencia {
             case 1:
                 while (llaves.length > 0) {
                     turno = (int) llaves[0];
+                    System.out.println("Turno: " + turno);
                     System.out.println("Ejecutando proceso: " + procesos.get(turno));
-                    System.out.println("Finaliza proceso: " + procesos.get(turno));
-                    procesos.remove(i);
-                    i++;
-                    llaves = procesos.keySet().toArray();
+                    //procesos.remove(i);
+                    System.out.println("Finalizó proceso");    
+                    //i++;
+                    //llaves = procesos.keySet().toArray();
                 }
                 break;
             case 2:
+                while (llaves.length > 0) {
+                    turno = (int) llaves[0];
+                    System.out.println("Turno: " + turno);
+                    System.out.println("Ejecutando proceso: " + procesos.get(turno));
+                    //procesos.remove(i);
+                    System.out.println("Finalizó proceso");    
+                    //i++;
+                    //llaves = procesos.keySet().toArray();
+                }
                 break;
             case 3:
                 break;
