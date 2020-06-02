@@ -29,15 +29,17 @@ public class IntentosConcurrencia {
         procesos = new HashMap<>();
         procesos.put(0, "p_0");
         procesos.put(1, "p_1");
+        procesos.put(2, "p_2");
+        procesos.put(3, "p_3");
 
     }
 
     public void algoritmoIntento1(int opc) {
 
+        Object[] llaves = procesos.keySet().toArray();
+        int i = 0;
         switch (opc) {
             case 0:
-                Object[] llaves = procesos.keySet().toArray();
-                int i = 0;
                 while (llaves.length > 0) {
                     turno = (int) llaves[0];
                     System.out.println("Ejecutando proceso: " + procesos.get(turno));
@@ -47,8 +49,15 @@ public class IntentosConcurrencia {
                     llaves = procesos.keySet().toArray();
                 }
                 break;
-
             case 1:
+                while (llaves.length > 0) {
+                    turno = (int) llaves[0];
+                    System.out.println("Ejecutando proceso: " + procesos.get(turno));
+                    System.out.println("Finaliza proceso: " + procesos.get(turno));
+                    procesos.remove(i);
+                    i++;
+                    llaves = procesos.keySet().toArray();
+                }
                 break;
             case 2:
                 break;
