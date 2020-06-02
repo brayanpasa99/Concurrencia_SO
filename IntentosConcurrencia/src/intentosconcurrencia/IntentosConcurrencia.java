@@ -21,7 +21,7 @@ public class IntentosConcurrencia {
 
     public static void main(String[] args) {
         IntentosConcurrencia o = new IntentosConcurrencia();
-        o.algoritmoIntento1(1);
+        o.algoritmoIntento1(0);
     }
 
     public IntentosConcurrencia() {
@@ -48,6 +48,9 @@ public class IntentosConcurrencia {
                     System.out.println("Finalizó proceso");    
                     i++;
                     llaves = procesos.keySet().toArray();
+                    for(int j=0; j<llaves.length; j++){
+                        System.out.println(llaves[j]);
+                    }
                 }
                 break;
             case 1:
@@ -66,15 +69,19 @@ public class IntentosConcurrencia {
                     turno = (int) llaves[0];
                     System.out.println("Turno: " + turno);
                     System.out.println("Ejecutando proceso: " + procesos.get(turno));
-                    //procesos.remove(i);
-                    System.out.println("Finalizó proceso");    
-                    //i++;
-                    //llaves = procesos.keySet().toArray();
+                    try{
+                        Thread.sleep((long) (Math.random()*10000 + 2000));
+                    } catch (InterruptedException e){ 
+                        System.out.println(e.toString());
+                    }  
+                    procesos.remove(i);
+                    System.out.println("Finalizó proceso"); 
+                    i++;
+                    llaves = procesos.keySet().toArray();
                 }
                 break;
-            case 3:
+            default:
                 break;
-
         }
 
     }
