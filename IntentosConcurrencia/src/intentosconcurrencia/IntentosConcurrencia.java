@@ -22,7 +22,19 @@ public class IntentosConcurrencia {
 
     public static void main(String[] args) {
         IntentosConcurrencia o = new IntentosConcurrencia();
-        o.algoritmoIntento1(2);
+        AlgoritmoPeterson ap = new AlgoritmoPeterson();
+        //o.algoritmoIntento1(2);
+        
+        ap.calcTinicio();
+        boolean[] señales = {false, false};
+        ap.setSeñal(señales);
+        ap.setTurno(1);
+        ap.procedure_p1();
+        ap.procedure_p0();
+        ap.getTtotal();
+        
+        System.out.println("Algoritmo de Peterson tiempo: " + ap.getTtotal());
+        
     }
 
     public IntentosConcurrencia() {
