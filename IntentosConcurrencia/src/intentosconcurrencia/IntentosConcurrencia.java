@@ -22,19 +22,9 @@ public class IntentosConcurrencia {
 
     public static void main(String[] args) {
         IntentosConcurrencia o = new IntentosConcurrencia();
-        AlgoritmoPeterson ap = new AlgoritmoPeterson();
-        //o.algoritmoIntento1(2);
-        
-        ap.calcTinicio();
-        boolean[] señales = {false, false};
-        ap.setSeñal(señales);
-        ap.setTurno(1);
-        ap.procedure_p1();
-        ap.procedure_p0();
-        ap.getTtotal();
-        
-        System.out.println("Algoritmo de Peterson tiempo: " + ap.getTtotal());
-        
+        //MODIFICAR SWITHC CASE PARA OBTENER DIFERENTES CASOS
+        o.algoritmoIntento1(2);
+
     }
 
     public IntentosConcurrencia() {
@@ -58,11 +48,11 @@ public class IntentosConcurrencia {
                     System.out.println("Turno: " + turno);
                     System.out.println("Ejecutando proceso: " + procesos.get(turno));
                     procesos.remove(i);
-                    System.out.println("Finalizó proceso");    
+                    System.out.println("Finalizó proceso");
                     i++;
                     llaves = procesos.keySet().toArray();
                 }
-                Ttotal = System.currentTimeMillis()-Tinicio;
+                Ttotal = System.currentTimeMillis() - Tinicio;
                 System.out.println("Tiempo total de ejecución: " + Ttotal);
                 break;
             case 1:
@@ -71,11 +61,11 @@ public class IntentosConcurrencia {
                     System.out.println("Turno: " + turno);
                     System.out.println("Ejecutando proceso: " + procesos.get(turno));
                     //procesos.remove(i);
-                    System.out.println("Finalizó proceso");    
+                    System.out.println("Finalizó proceso");
                     //i++;
                     //llaves = procesos.keySet().toArray();
                 }
-                Ttotal = System.currentTimeMillis()-Tinicio;
+                Ttotal = System.currentTimeMillis() - Tinicio;
                 System.out.println("Tiempo total de ejecución: " + Ttotal);
                 break;
             case 2:
@@ -84,19 +74,19 @@ public class IntentosConcurrencia {
                     System.out.println("Turno: " + turno);
                     long TinicioP = System.currentTimeMillis();
                     System.out.println("Ejecutando proceso: " + procesos.get(turno));
-                    try{
-                        Thread.sleep((long) (Math.random()*10000 + 2000));
-                    } catch (InterruptedException e){ 
+                    try {
+                        Thread.sleep((long) (Math.random() * 10000 + 2000));
+                    } catch (InterruptedException e) {
                         System.out.println(e.toString());
-                    }  
+                    }
                     procesos.remove(i);
-                    System.out.println("Finalizó proceso"); 
+                    System.out.println("Finalizó proceso");
                     long TProceso = System.currentTimeMillis() - TinicioP;
                     System.out.println("Tiempo: " + TProceso + " Proceso: " + i);
                     i++;
                     llaves = procesos.keySet().toArray();
                 }
-                Ttotal = System.currentTimeMillis()-Tinicio;
+                Ttotal = System.currentTimeMillis() - Tinicio;
                 System.out.println("Tiempo total de ejecución: " + Ttotal);
                 break;
             default:
