@@ -1,6 +1,6 @@
 # Integrantes
 
-Brayan Alexander Paredes Sánchez - 20171020106 
+Brayan Alexander Paredes Sánchez - 20171020106    
 Kevin Andrés Borda Palacios -   
 Mateo Yate Gonzalez - 20171020087   
 
