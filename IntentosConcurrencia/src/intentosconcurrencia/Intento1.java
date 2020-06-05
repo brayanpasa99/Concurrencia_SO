@@ -11,7 +11,7 @@ import java.util.HashMap;
  *
  * @author braya
  */
-public class IntentosConcurrencia {
+public class Intento1 {
 
     /**
      * @param args the command line arguments
@@ -21,13 +21,13 @@ public class IntentosConcurrencia {
     long Ttotal = 0;
 
     public static void main(String[] args) {
-        IntentosConcurrencia o = new IntentosConcurrencia();
+        Intento1 o = new Intento1();
         //MODIFICAR SWITHC CASE PARA OBTENER DIFERENTES CASOS
         o.algoritmoIntento1(2);
 
     }
 
-    public IntentosConcurrencia() {
+    public Intento1() {
 
         procesos = new HashMap<>();
         procesos.put(0, "p_0");

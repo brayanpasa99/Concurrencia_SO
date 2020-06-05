@@ -9,17 +9,18 @@ package intentosconcurrencia;
  *
  * @author braya
  */
-public class AlgoritmoPeterson {
+public class Peterson {
 
     boolean[] señal = new boolean[2];
     int turno = 0;
     long Ttotal, Tinicio;
 
     public static void main(String[] args) {
-        AlgoritmoPeterson ap = new AlgoritmoPeterson();
+        Peterson ap = new Peterson();
         //o.algoritmoIntento1(2);
 
         ap.calcTinicio();
+        //MODIFICAR SEÑALES PARA OBTENER DIFERENTES CASOS
         boolean[] señales = {false, false};
         ap.setSeñal(señales);
         ap.setTurno(1);
@@ -55,7 +56,7 @@ public class AlgoritmoPeterson {
         this.turno = turno;
     }
 
-    public AlgoritmoPeterson() {
+    public Peterson() {
 
     }
 

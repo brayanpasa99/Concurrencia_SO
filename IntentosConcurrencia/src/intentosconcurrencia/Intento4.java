@@ -9,7 +9,7 @@ package intentosconcurrencia;
  *
  * @author KevinB
  */
-public class Deckerr {
+public class Intento4 {
 
     /**
      * @param args the command line arguments
@@ -21,7 +21,8 @@ public class Deckerr {
         
         long TInicio, TFin, tiempo; //Variables para determinar el tiempo de ejecución
         TInicio = System.currentTimeMillis(); 
-        Deckerr d = new Deckerr();
+        Intento4 d = new Intento4();
+        //MODIFICAR SEÑALES PARA OBTENER DIFERENTES CASOS
         señal[0]=false;
         señal[1]=false;
         d.proceso1();

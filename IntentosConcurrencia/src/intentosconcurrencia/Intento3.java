@@ -21,6 +21,7 @@ public class Intento3 {
         
         long TInicio, TFin, tiempo; //Variables para determinar el tiempo de ejecución
         TInicio = System.currentTimeMillis(); 
+        //MODIFICAR SEÑALES PARA OBTENER DIFERENTES CASOS
         señal[0]=false;
         señal[1]=false;
         proceso1Caso3();

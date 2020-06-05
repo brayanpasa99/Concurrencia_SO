@@ -9,7 +9,7 @@ package intentosconcurrencia;
  *
  * @author KevinB
  */
-public class DeckerIntentoII {
+public class Intento2 {
 
     /**
      * @param args the command line arguments
@@ -21,6 +21,7 @@ public class DeckerIntentoII {
         
         long TInicio, TFin, tiempo; //Variables para determinar el tiempo de ejecución
         TInicio = System.currentTimeMillis(); 
+        //MODIFICAR SEÑALES PARA OBTENER DIFERENTES CASOS
         señal[0]=false;
         señal[1]=false;
         //Caso particular que cada proceso tiene distinto timpo de ejecución
