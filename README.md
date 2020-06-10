@@ -1,7 +1,6 @@
 # Integrantes
 
-Brayan Alexander Paredes Sánchez - 20171020106    
-Kevin Andrés Borda Palacios -   
+Kevin Andrés Borda  -   20171020088
 Mateo Yate Gonzalez - 20171020087   
 
 # Exclusión mutua e interbloqueo
